@@ -22,8 +22,8 @@ class TestScene extends smz_game_object.SmzGameObject {
     self.mainSceneTransform = new PIXI.Container();
     self.mainSceneTransform.scale.x = 0.25;
     self.mainSceneTransform.scale.y = 0.25;
-    self.mainSceneTransform.position.x = 100;
-    self.mainSceneTransform.position.y = 100;
+    self.mainSceneTransform.position.x = 300;
+    self.mainSceneTransform.position.y = 200;
     self.addChild(self.mainSceneTransform);
     
     self.mainScene = new MainScene(self.runtime);
@@ -60,6 +60,13 @@ class TestScene extends smz_game_object.SmzGameObject {
     
     //self.tmp = new PIXI.Sprite(self.runtime.nRoundBoxTextureList[9]);
     //self.addChild(self.tmp);
+    
+    self.testLogo = PIXI.Sprite.from(runtime.logoTexture);
+    self.testLogo.position.x = 0;
+    self.testLogo.position.y = 200;
+    self.testLogo.width = 100;
+    self.testLogo.height = 100;
+    self.addChild(self.testLogo);
     
     self.mainScene.cellGameGObj.createDebugObj();
   };
